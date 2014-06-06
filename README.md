@@ -64,7 +64,6 @@ Ractive.decorators.chosen.type.demo = function (node) {
 
 License
 -------
-Copyright (c) 2014 [Kalcifer]. Licensed MIT
-Forked from [Prezent Internet B.V.](http://www.prezent.nl). Licensed MIT
+Copyright (c) 2014 Kalcifer. Forked from [Prezent Internet B.V.](http://www.prezent.nl). Licensed MIT
 
 Created with the [Ractive.js plugin template](https://github.com/ractivejs/plugin-template) for Grunt.
