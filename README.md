@@ -37,7 +37,7 @@ Add the decorator to your select elements:
 Add option objects to the `type` property to set chosen options:
 
 ```js
-Ractive.decorators.select2.type.demo = {
+Ractive.decorators.chosen.type.demo = {
     width: '25%',
     // ... other chosen options
 };

@@ -1,8 +1,8 @@
 {
-	"name": "ractive-decorators-select2",
-	"version": "0.1.4",
-	"author": "Prezent Internet B.V.",
-	"main": "ractive-decorators-select2.js",
+	"name": "ractive-decorators-chosen",
+	"version": "0.1.0",
+	"author": "Kalcifer & Prezent Internet B.V.",
+	"main": "ractive-decorators-chosen.js",
 	"ignore": [
 		"**/.*",
 		"src",

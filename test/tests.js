@@ -1,12 +1,12 @@
-// ractive-decorators-select2 tests
+// ractive-decorators-chosen tests
 // =============================================
 
 (function () {
 
 	var fixture;
 
-    test('Ractive.decortors.select2 exists and is a function', function (t) {
-        t.ok(typeof Ractive.decorators.select2 === 'function');
+    test('Ractive.decortors.chosen exists and is a function', function (t) {
+        t.ok(typeof Ractive.decorators.chosen === 'function');
     });
 
 
