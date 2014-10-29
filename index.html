@@ -2,29 +2,29 @@
 <html lang='en-GB'>
 <head>
 	<meta charset='utf-8'>
-	<title>Ractive.js select2 decorator plugin</title>
+	<title>Ractive.js chosen decorator plugin</title>
 
 	<!-- CSS -->
 	<link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' href='demo/main.css'>
-    <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.css'>
+    <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css'>
 </head>
 
 <body>
 
-	<a class='forkme' href='https://github.com/prezent/ractive-decorators-select2'>Fork me on GitHub</a>
+	<a class='forkme' href='https://github.com/kalcifer/ractive-decorators-chosen'>Fork me on GitHub</a>
 
 	<header>
-		<h1>Ractive.js Select2 decorator plugin</h1>
+		<h1>Ractive.js Chosen decorator plugin</h1>
 		<p class='strap'>
-			<span class='download'>download: <a href='https://github.com/prezent/ractive-decorators-select2'>ractive-decorators-select2.js</a></span>
-			<span class='more-plugins'>more plugins at <a href='http://docs.ractivejs.org/latest/plugins'>ractivejs.org</a></span>
+			<span class='download'>download: <a href='https://github.com/kalcifer/ractive-decorators-chosen'>ractive-decorators-chosen.js</a></span>
+			<span class='more-plugins'>more plugins at <a href='http://docs.ractivejs.org/latest/plugins'>ractivejs.org/plugins</a></span>
 		</p>
 	</header>
 
 	<main>
-        <p>Integrate <a href='http://ivaynberg.github.io/select2/'>Select2</a> with Ractive, including two-way binding.</p>
-        <p>In order to pass options to the select2 constructor, add an options object to the decorator <tt>type</tt> property as seen in
+        <p>Integrate <a href='http://harvesthq.github.io/chosen/'>Chosen</a> with Ractive, including two-way binding.</p>
+        <p>In order to pass options to the chosen constructor, add an options object to the decorator <tt>type</tt> property as seen in
         the demo below.</p>
 
 		<div id='demo' class='clearfix'></div>
@@ -34,12 +34,12 @@
 	</main>
 
 	<footer>
-        <p>Copyright &copy; 2014 <a href="http://www.prezent.nl">Prezent Internet B.V.</a> Licensed MIT</p>
+        <p>Copyright &copy; 2014 <a href="https://github.com/kalcifer">Kalcifer</a> Licensed MIT</p>
 	</footer>
 
 	<!-- Demo template -->
 	<script id='demo-template' type='text/ractive'>
-        <select decorator='select2:demo' value='{{selected}}'>
+        <select decorator='chosen:demo' value='{{selected}}'>
             {{#options}}
                 <option value='{{.}}'>{{.}}</option>
             {{/options}}
@@ -50,15 +50,17 @@
 
 	<!-- Dependencies -->
     <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js'></script>
     <script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
-    <script src='ractive-decorators-select2.js'></script>
+    <script src='ractive-decorators-chosen.js'></script>
 
 	<!-- Demo code -->
 	<script id='demo-code'>
-        // define select2 options
-        Ractive.decorators.select2.type.demo = {
-            width: '25%'
+        // define chosen options
+        Ractive.decorators.chosen.type.demo = function (node) {
+            return {
+                width: '25%'
+            }
         };
 
         ractive = new Ractive({
