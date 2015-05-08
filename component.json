@@ -1,8 +1,8 @@
 {
 	"name": "ractive-decorators-chosen",
-	"repo": "git://github.com/prezent/ractive-decorators-chosen.git",
+	"repo": "git://github.com/kalcifer/ractive-decorators-chosen.git",
 	"description": "ractive-decorators-chosen",
-	"version": "0.1.0",
+	"version": "0.1.5",
 	"keywords": [],
 	"development": {},
 	"license": "MIT",
