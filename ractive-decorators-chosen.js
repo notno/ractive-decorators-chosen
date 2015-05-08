@@ -75,7 +75,7 @@
 
         // Push changes from ractive to chosen
         if (node._ractive.binding) {
-            observer = ractive.observe(node._ractive.binding.keypath, function (newvalue, oldvalue) {
+            observer = ractive.observe(node._ractive.binding.keypath.str, function (newvalue, oldvalue) {
                 if (!setting) {
                     setting = true;
                     window.setTimeout(function () {
@@ -113,3 +113,4 @@
     Ractive.decorators.chosen = chosenDecorator;
 
 }));
+
