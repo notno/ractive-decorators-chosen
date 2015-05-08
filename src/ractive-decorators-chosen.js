@@ -54,10 +54,12 @@
     'use strict';
 
     var chosenDecorator;
+    var versionArr = Ractive.VERSION;
 
     chosenDecorator = function (node, type) {
 
         var ractive = node._ractive.root;
+	var keypath = node._ractive.binding.keypath;
         var setting = false;
         var observer;
 
@@ -75,7 +77,7 @@
 
         // Push changes from ractive to chosen
         if (node._ractive.binding) {
-            observer = ractive.observe(node._ractive.binding.keypath.str, function (newvalue, oldvalue) {
+            observer = ractive.observe( (versionArr[0] < 0 && versionArr[1] < 7) ? keypath : keypath.str, function (newvalue, oldvalue) {
                 if (!setting) {
                     setting = true;
                     window.setTimeout(function () {
